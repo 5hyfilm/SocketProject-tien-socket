@@ -304,7 +304,13 @@ export default function MainPage() {
     }
   };
   return (
-    <main className="text-white min-h-screen bg-black h-screen w-screen flex">
+    <main
+      className="text-white min-h-screen h-screen w-screen flex"
+      style={{
+        backgroundColor: "var(--background)",
+        color: "var(--foreground)",
+      }}
+    >
       <div className="border  m-5 bg-gray-700 border-gray-700 w-[20%] z-10 rounded-l-2xl ">
         <div
           className="w-full h-[10%]  rounded-2xl text-2xl flex justify-around items-center"
