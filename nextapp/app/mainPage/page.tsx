@@ -6,6 +6,8 @@ import axios from "axios";
 import { signOut } from "next-auth/react";
 import CreateGroupCommand from "../components/CreateGroupCommand";
 import ShowChatCommand from "../components/ShowChatCommand";
+import { ThemeSwitcher } from "../components/ThemeSwitcher";
+
 import { LogOut, SendHorizontal, Users } from "lucide-react";
 import {
   Dialog,
@@ -251,8 +253,7 @@ export default function MainPage() {
       console.log("res create chat", res);
       if (!res.data.success) {
         alert(res.data.message);
-      }
-      else setOpen(false);
+      } else setOpen(false);
     }
   };
   const handleSendMessage = (
@@ -534,6 +535,9 @@ export default function MainPage() {
                 }${yourUsername == data.username ? "(You)" : ""}`}</span>
               </div>
             ))}
+          </div>
+          <div className="mt-4 flex justify-center">
+            <ThemeSwitcher />
           </div>
         </div>
 
