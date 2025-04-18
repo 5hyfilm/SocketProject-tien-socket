@@ -478,7 +478,7 @@ export default function MainPage() {
                 ))}
               </div>
             )}
-            <div className="h-[10vh] flex items-center justify-between bg-black m-10 rounded-4xl">
+            <div className="h-[10vh] flex items-center justify-between bg-black mx-5 mb-5 rounded-xl overflow-hidden">
               <input
                 onChange={(e) => setCurrentMessage(e.target.value)}
                 onKeyDown={(e) => {
@@ -501,11 +501,10 @@ export default function MainPage() {
                 value={currentMessage}
                 type="text"
                 placeholder="Send a message"
-                className="w-[80%] h-[80%] text-2xl px-5 focus-visible:outline-0"
+                className="w-[85%] h-full text-2xl px-5 focus-visible:outline-0 border-none"
                 style={{
                   backgroundColor: "var(--background)",
                   color: "var(--foreground)",
-                  border: "1px solid var(--primary)",
                 }}
               />
               <button
@@ -524,13 +523,13 @@ export default function MainPage() {
                     chats[chatState].isGroup
                   )
                 }
-                className="flex justify-center items-center w-[10%] h-[100%] rounded-2xl"
+                className="flex justify-center items-center w-[15%] h-full"
                 style={{
                   backgroundColor: "var(--primary)",
                   color: "var(--background)",
                 }}
               >
-                <SendHorizontal size={40} />
+                <SendHorizontal size={30} />
               </button>
             </div>
           </div>
