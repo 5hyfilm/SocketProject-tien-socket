@@ -3,7 +3,6 @@
 
 import { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
-import { useTheme } from "./ThemeProvider";
 
 interface ThemedButtonProps {
   children: ReactNode;
@@ -20,9 +19,6 @@ export function ThemedButton({
   className = "",
   disabled = false,
 }: ThemedButtonProps) {
-  const { getCurrentTheme } = useTheme();
-  const theme = getCurrentTheme();
-
   // Compute style based on variant
   const getStyle = () => {
     switch (variant) {
